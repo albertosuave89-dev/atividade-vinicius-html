@@ -4,4 +4,4 @@ postagem da atividade
 # ALUNOS:
 Rafael, Alberto, Mahgid
 # CURSOS:
-Engenharia da computação
+Engenharia da computação - 6° Período
