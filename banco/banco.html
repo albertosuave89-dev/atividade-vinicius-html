@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Banco Santo André</title>
+  <link rel="icon" href="banco-painho.png" type="image/png">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topo">
+    <img src="banco-painho.png" alt="Logo do Banco Santo André" class="logo">
+    <div>
+      <h1>Banco Santo André</h1>
+      <p class="slogan">Mais que um banco, um painho.</p>
+    </div>
+  </header>
+
+  <main class="painel">
+    <section class="cartao-saldo">
+      <span class="rotulo">Saldo disponível</span>
+      <strong id="saldo">R$ 1.000,00</strong>
+    </section>
+
+    <section class="operacoes">
+      <label for="operacao">Operação</label>
+      <select id="operacao">
+        <option value="saldo">Consultar saldo</option>
+        <option value="depositar">Depositar</option>
+        <option value="sacar">Sacar</option>
+        <option value="extrato">Ver extrato</option>
+      </select>
+
+      <label for="valor">Valor (R$)</label>
+      <input type="number" id="valor" placeholder="Ex.: 200" step="1">
+
+      <button id="executar" type="button">Executar operação</button>
+    </section>
+
+    <section class="resultado" aria-live="polite">
+      <h2>Resultado</h2>
+      <!-- Este aviso é substituído pelo script.js quando ele carrega corretamente -->
+      <div id="mensagem" class="mensagem erro">O JavaScript não carregou. Confira se o arquivo script.js está na mesma pasta do index.html e se o nome está exatamente assim.</div>
+    </section>
+  </main>
+
+  <footer class="rodape">Simulador para fins didáticos. Nenhuma conexão com banco real.</footer>
+
+  <!-- Aviso que aparece após as operações -->
+  <div id="meme" class="meme" hidden>
+    <div class="meme-caixa">
+      <h2>AGORA FAZ O L, SEU DINHEIRO É NOSSO</h2>
+      <img id="meme-foto" src="roubo.png" alt="Imagem do aviso">
+      <p id="meme-aviso" class="meme-aviso" hidden>Imagem roubo.png não encontrada na pasta.</p>
+      <button id="meme-fechar" type="button">Fechar</button>
+    </div>
+  </div>
+
+  <script src="banco.js"></script>
+</body>
+</html>
