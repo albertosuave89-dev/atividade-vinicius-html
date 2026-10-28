@@ -1,0 +1,36 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Tabuada</title>
+</head>
+<body>
+
+    <h1>Tabuada</h1>
+
+    <p>Digite o número da tabuada:</p>
+
+    <input type="number" id="numero">
+
+    <button onclick="mostrarTabuada()">Mostrar tabuada</button>
+
+    <h3>Resultado:</h3>
+
+    <p id="resultado"></p>
+
+    <script>
+        function mostrarTabuada() {
+            let numero = Number(document.getElementById("numero").value);
+            let resultado = document.getElementById("resultado");
+
+            resultado.innerHTML = "";
+
+            for (let i = 1; i <= 10; i++) {
+                resultado.innerHTML += numero + " x " + i + " = " + (numero * i) + "<br>";
+            }
+        }
+    </script>
+
+</body>
+</html>
